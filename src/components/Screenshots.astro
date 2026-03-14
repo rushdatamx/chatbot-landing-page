@@ -1,0 +1,67 @@
+---
+const screenshots = [
+  {
+    src: "/images/screenshots/venta-real1.png",
+    alt: "Chatbot cotizando llantas con opciones de precio en WhatsApp",
+    caption: "Cotiza al instante con precios reales",
+  },
+  {
+    src: "/images/screenshots/venta-real3.png",
+    alt: "Chatbot generando pedido y link de pago con Stripe",
+    caption: "Cobra con tarjeta vía Stripe",
+  },
+  {
+    src: "/images/screenshots/venta-real2.png",
+    alt: "Equipo celebrando la primera venta hecha por el chatbot",
+    caption: "Primera venta real con el bot",
+  },
+];
+---
+
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Así se ve en acción
+      </h2>
+      <p class="text-xl text-gray-600">
+        Capturas reales de un chatbot construido con este sistema
+      </p>
+    </div>
+
+    <!-- Top Row: 3 WhatsApp Screenshots -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
+      {screenshots.map((shot) => (
+        <div class="group">
+          <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <img
+              src={shot.src}
+              alt={shot.alt}
+              class="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+          <p class="mt-3 text-sm font-medium text-gray-600 text-center">
+            {shot.caption}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom Row: Conference Photo (wider, social proof) -->
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+        <img
+          src="/images/screenshots/social-proof.png"
+          alt="Conferencia de RushData sobre automatización con IA"
+          class="w-full h-auto"
+          loading="lazy"
+        />
+      </div>
+      <p class="mt-3 text-sm font-medium text-gray-600 text-center">
+        RushData — Conferencia sobre automatización con IA para negocios
+      </p>
+    </div>
+  </div>
+</section>

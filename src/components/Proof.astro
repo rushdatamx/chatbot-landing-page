@@ -1,0 +1,128 @@
+---
+const checkoutUrl = "https://pay.hotmart.com/R1048830230";
+---
+
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Headline: Hormozi style — don't say "testimonials", show the receipts -->
+    <div class="text-center mb-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        Esto no es teoría. Es un sistema que ya vende.
+      </h2>
+    </div>
+
+    <!-- Sub-headline with specificity -->
+    <p class="text-center text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+      Estas son capturas reales de un negocio usando este mismo sistema. El chatbot cotiza, cobra y confirma pedidos — sin intervención humana.
+    </p>
+
+    <!-- Metrics Bar: hard numbers, no fluff -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-white rounded-2xl p-6 text-center shadow-sm">
+        <p class="text-3xl md:text-4xl font-bold text-primary-500">24/7</p>
+        <p class="text-sm text-gray-600 mt-1">Responde sin descanso</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 text-center shadow-sm">
+        <p class="text-3xl md:text-4xl font-bold text-primary-500">&lt;5s</p>
+        <p class="text-sm text-gray-600 mt-1">Tiempo de respuesta</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 text-center shadow-sm">
+        <p class="text-3xl md:text-4xl font-bold text-primary-500">$0</p>
+        <p class="text-sm text-gray-600 mt-1">Costo por empleado</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 text-center shadow-sm">
+        <p class="text-3xl md:text-4xl font-bold text-primary-500">14 días</p>
+        <p class="text-sm text-gray-600 mt-1">De cero a funcionando</p>
+      </div>
+    </div>
+
+    <!-- Screenshots: the receipts -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-4">
+      <div class="group">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <img
+            src="/images/screenshots/venta-real1.png"
+            alt="Chatbot cotizando productos con precios reales en WhatsApp"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+        <p class="mt-3 text-sm font-semibold text-gray-700 text-center">
+          Cliente pide cotización. Bot responde en segundos.
+        </p>
+      </div>
+      <div class="group">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <img
+            src="/images/screenshots/venta-real3.png"
+            alt="Chatbot generando link de pago con Stripe automáticamente"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+        <p class="mt-3 text-sm font-semibold text-gray-700 text-center">
+          Bot genera pedido y link de pago. Automático.
+        </p>
+      </div>
+      <div class="group">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <img
+            src="/images/screenshots/venta-real2.png"
+            alt="Equipo celebrando la primera venta real del chatbot"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+        <p class="mt-3 text-sm font-semibold text-gray-700 text-center">
+          Primera venta real. El bot cerró solo.
+        </p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-200 my-12 max-w-2xl mx-auto"></div>
+
+    <!-- Creator credibility: conference photo + context -->
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Photo -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+          <img
+            src="/images/screenshots/social-proof.png"
+            alt="Conferencia de RushData sobre automatización con IA para negocios"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+        <!-- Context -->
+        <div>
+          <p class="text-sm font-semibold text-primary-500 uppercase tracking-wide mb-3">
+            Quién está detrás
+          </p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            Construimos esto para un negocio real. Funcionó. Ahora te enseñamos cómo.
+          </h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Este sistema nació resolviendo un problema real: un negocio que perdía ventas por no responder WhatsApp a tiempo. Lo construimos, lo pusimos en producción, y empezó a vender solo.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Después lo convertimos en un curso paso a paso para que cualquier dueño de negocio — sin experiencia técnica — pueda replicarlo en 14 días.
+          </p>
+          <a
+            href={checkoutUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            Quiero replicarlo
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

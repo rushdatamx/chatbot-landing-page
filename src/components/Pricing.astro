@@ -1,0 +1,63 @@
+---
+const checkoutUrl = "https://pay.hotmart.com/R1048830230";
+
+const features = [
+  "27 videos paso a paso",
+  "5 guías descargables",
+  "Todo el código listo para copiar y pegar",
+  "Templates para 3 industrias",
+  "Acceso de por vida + actualizaciones",
+];
+---
+
+<section id="precio" class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Price Card -->
+    <div class="bg-white rounded-3xl shadow-xl border-2 border-primary-500 overflow-hidden">
+      <!-- Card Header -->
+      <div class="bg-primary-500 text-white text-center py-4 px-6">
+        <p class="font-semibold text-sm uppercase tracking-wide">Precio de lanzamiento</p>
+      </div>
+
+      <div class="p-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          El Sistema WhatsApp AI
+        </h3>
+
+        <!-- Price -->
+        <div class="mb-6">
+          <span class="text-2xl text-gray-400 line-through">$129 USD</span>
+          <div class="text-5xl font-bold text-primary-500 mt-1">$49 USD</div>
+          <p class="text-sm text-gray-500 mt-2">Pago único. Sin suscripción.</p>
+        </div>
+
+        <!-- Features -->
+        <ul class="space-y-3 mb-8 text-left">
+          {features.map((feature) => (
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-gray-700">{feature}</span>
+            </li>
+          ))}
+        </ul>
+
+        <!-- CTA -->
+        <a
+          href={checkoutUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full bg-primary-500 hover:bg-primary-600 text-white font-bold py-5 px-8 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-center"
+        >
+          Quiero mi Chatbot por $49
+        </a>
+
+        <p class="text-sm text-gray-500 mt-4">
+          Pago único. Acceso de por vida.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

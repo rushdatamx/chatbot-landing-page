@@ -1,0 +1,87 @@
+---
+const features = [
+  {
+    title: "Atiende 24/7",
+    description: "Tu chatbot responde clientes las 24 horas, los 7 días de la semana. Incluso a las 2 AM.",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>`
+  },
+  {
+    title: "Responde con IA",
+    description: "Contesta preguntas sobre tus productos con inteligencia artificial. Sabe tu catálogo de memoria.",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+    </svg>`
+  },
+  {
+    title: "Cotiza automáticamente",
+    description: "Genera cotizaciones con precios reales de tu catálogo. Sin intervención manual.",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+    </svg>`
+  },
+  {
+    title: "Cobra con tarjeta",
+    description: "Genera links de pago seguros con Stripe. Tu cliente paga con tarjeta desde WhatsApp.",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+    </svg>`
+  },
+  {
+    title: "Confirma pedidos",
+    description: "Envía confirmación automática por WhatsApp cuando el cliente paga. Todo sin que hagas nada.",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>`
+  },
+  {
+    title: "Transfiere a humano",
+    description: "Cuando el cliente necesita algo especial, el chatbot transfiere la conversación a un vendedor real.",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+    </svg>`
+  }
+];
+---
+
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Narrative Part -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Imagina esto:
+      </h2>
+      <p class="text-xl text-gray-600 leading-relaxed mb-4">
+        Son las <span class="font-semibold text-secondary-700">2 AM</span>. Un cliente te escribe por WhatsApp. Tu chatbot le responde al instante, le muestra productos, le genera una cotización y le cobra con tarjeta.
+      </p>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Tú te enteras en la mañana: <span class="font-semibold text-primary-500">"Nuevo pedido pagado: $350 MXN."</span>
+      </p>
+    </div>
+
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        Tu chatbot de WhatsApp con IA que:
+      </h3>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature) => (
+        <div class="group p-6 bg-white rounded-2xl hover:bg-primary-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+          <div class="w-14 h-14 bg-green-100 group-hover:bg-green-200 rounded-xl flex items-center justify-center text-green-600 mb-4 transition-colors duration-300">
+            <Fragment set:html={feature.icon} />
+          </div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-2">
+            {feature.title}
+          </h4>
+          <p class="text-gray-600">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const config = {
+  brand: "RushData",
+  email: "mario@rushdata.com.mx",
+  lastUpdate: "13 de marzo de 2026",
+};
+---
+
+<Layout
+  title="Aviso de Privacidad"
+  description={`Aviso de privacidad de ${config.brand}. Conoce cómo protegemos tu información personal.`}
+>
+  <Header />
+
+  <main class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+        Aviso de Privacidad
+      </h1>
+
+      <p class="text-gray-500 mb-8">
+        Última actualización: {config.lastUpdate}
+      </p>
+
+      <div class="prose prose-lg max-w-none text-gray-700">
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">1. Identidad del Responsable</h2>
+          <p>
+            <strong>{config.brand}</strong> es responsable del tratamiento de sus datos personales
+            en relación con los productos y servicios educativos que ofrece.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">2. Datos Personales que Recabamos</h2>
+          <p>Para las finalidades señaladas en el presente aviso de privacidad, podemos recabar los siguientes datos personales:</p>
+          <ul class="list-disc pl-6 mt-4 space-y-2">
+            <li>Nombre completo</li>
+            <li>Dirección de correo electrónico</li>
+            <li>Información de pago (procesada por Hotmart, no almacenada por nosotros)</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">3. Finalidades del Tratamiento</h2>
+          <h3 class="text-lg font-semibold text-gray-900 mt-4 mb-2">Finalidades primarias:</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Proporcionar acceso al curso adquirido</li>
+            <li>Dar seguimiento a solicitudes de soporte</li>
+            <li>Gestionar la compra y acceso a productos digitales</li>
+          </ul>
+
+          <h3 class="text-lg font-semibold text-gray-900 mt-4 mb-2">Finalidades secundarias:</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Enviar comunicaciones sobre actualizaciones del curso</li>
+            <li>Informar sobre nuevos productos y servicios</li>
+            <li>Mejorar nuestros productos y servicios</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">4. Transferencia de Datos</h2>
+          <p>
+            Sus datos personales no serán transferidos a terceros sin su consentimiento,
+            salvo las excepciones previstas por la ley. La plataforma de pago (Hotmart)
+            procesa las transacciones de manera segura bajo sus propias políticas de privacidad.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">5. Derechos ARCO</h2>
+          <p>
+            Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al tratamiento
+            de sus datos personales. Para ejercer estos derechos, contacte:
+          </p>
+          <ul class="list-disc pl-6 mt-2 space-y-2">
+            <li>Correo electrónico: {config.email}</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">6. Cambios al Aviso de Privacidad</h2>
+          <p>
+            Nos reservamos el derecho de efectuar modificaciones o actualizaciones al presente
+            aviso de privacidad. Dichas modificaciones serán publicadas en nuestro sitio web.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">7. Consentimiento</h2>
+          <p>
+            Al adquirir nuestros productos o proporcionar sus datos personales a través de
+            nuestro sitio web, usted consiente el tratamiento de los mismos en los términos
+            del presente aviso de privacidad.
+          </p>
+        </section>
+      </div>
+
+      <!-- Back to home -->
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          Volver al inicio
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,96 @@
+---
+const checkoutUrl = "https://pay.hotmart.com/R1048830230";
+
+const faqs = [
+  {
+    question: "¿Necesito saber programar?",
+    answer: "No. El curso usa una metodología de copiar y pegar. Tú solo cambias los datos del ejemplo por los de tu negocio."
+  },
+  {
+    question: "¿Cuánto cuesta mantener el chatbot funcionando?",
+    answer: "Aproximadamente $25-50 USD al mes. Las herramientas tienen planes gratuitos o muy económicos."
+  },
+  {
+    question: "¿Funciona para mi tipo de negocio?",
+    answer: "Sí. El sistema es genérico y funciona para cualquier negocio que venda productos o servicios: restaurantes, tiendas, salones, clínicas, servicios profesionales, etc."
+  },
+  {
+    question: "¿Cuánto tiempo toma completar el curso?",
+    answer: "El contenido se libera en 14 días. Cada módulo toma entre 1-2 horas. Puedes ir a tu ritmo."
+  },
+  {
+    question: "¿El chatbot responde en español?",
+    answer: "Sí. El chatbot usa GPT-4o-mini que habla español, inglés, y más de 90 idiomas. Lo personalizas en el idioma que necesites."
+  },
+  {
+    question: "¿Qué pasa si algo no funciona?",
+    answer: "El curso incluye una guía de solución de problemas con los 15 errores más comunes y cómo resolverlos paso a paso."
+  },
+  {
+    question: "¿Puedo pagar en pesos mexicanos?",
+    answer: "Sí. Hotmart convierte automáticamente. El precio en MXN es aproximadamente $899 MXN (lanzamiento) o $1,299 MXN (precio regular)."
+  },
+  {
+    question: "¿Tienen garantía?",
+    answer: "Sí. Tienes 7 días completos para explorar el curso. Si por cualquier razón sientes que no es para ti, te devolvemos el 100% de tu dinero. Sin preguntas, sin complicaciones."
+  }
+];
+---
+
+<section id="faq" class="py-16 md:py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Preguntas Frecuentes
+      </h2>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="space-y-4">
+      {faqs.map((faq) => (
+        <details class="group bg-gray-50 rounded-2xl overflow-hidden">
+          <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-100 transition-colors">
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">
+              {faq.question}
+            </h3>
+            <span class="flex-shrink-0 w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 group-open:rotate-180 transition-transform duration-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6">
+            <p class="text-gray-600 leading-relaxed">
+              {faq.answer}
+            </p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <!-- Final CTA Block -->
+    <div class="mt-12 bg-secondary-900 rounded-2xl p-8 md:p-12 text-center">
+      <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+        Tu chatbot puede estar vendiendo en 14 días
+      </h3>
+      <p class="text-white/70 mb-8 max-w-xl mx-auto">
+        Cada día que pasa sin un chatbot es otro día de ventas perdidas, preguntas sin responder, y clientes que se van con la competencia.
+      </p>
+      <a
+        href={checkoutUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-primary-500 hover:bg-primary-600 text-white font-bold px-10 py-5 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-primary-500/30"
+      >
+        Empezar Ahora — $49 USD
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+      <p class="mt-4 text-white/50 text-sm">
+        Pago único. Acceso de por vida.
+      </p>
+    </div>
+  </div>
+</section>

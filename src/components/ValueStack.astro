@@ -1,0 +1,74 @@
+---
+const checkoutUrl = "https://pay.hotmart.com/R1048830230";
+
+const items = [
+  { name: "27 videos paso a paso (7+ horas de contenido)", value: "$199" },
+  { name: "3 Edge Functions listas para desplegar (chatbot + pagos + webhooks)", value: "$299" },
+  { name: "Workflow de n8n pre-configurado (solo conectas credenciales)", value: "$99" },
+  { name: "Templates de productos para 3 industrias", value: "$49" },
+  { name: "10 consultas SQL para reportes de negocio", value: "$49" },
+  { name: "Guía de solución de problemas (15 errores comunes)", value: "$49" },
+  { name: "3 guías bonus (imágenes, reportes, optimización de prompt)", value: "$99" },
+  { name: "Plantilla de credenciales + checklist de lanzamiento", value: "$29" },
+];
+
+const totalValue = "$872";
+---
+
+<section class="py-16 md:py-24 bg-secondary-900 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.4&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;4&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+
+  <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Todo lo que recibes
+      </h2>
+    </div>
+
+    <!-- Value Items -->
+    <div class="space-y-3 mb-8">
+      {items.map((item) => (
+        <div class="flex items-center justify-between bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-primary-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-white/90">{item.name}</span>
+          </div>
+          <span class="text-white/50 font-medium ml-4 flex-shrink-0">{item.value}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Total -->
+    <div class="border-t border-white/20 pt-6 mb-8">
+      <div class="flex items-center justify-between px-6">
+        <span class="text-white/70 text-lg">Valor total:</span>
+        <span class="text-white/50 text-2xl line-through">{totalValue}</span>
+      </div>
+      <div class="flex items-center justify-between px-6 mt-2">
+        <span class="text-white text-xl font-bold">Tu inversión hoy:</span>
+        <span class="text-primary-400 text-4xl font-bold">$49 USD</span>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center">
+      <a
+        href={checkoutUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-primary-500 hover:bg-primary-600 text-white font-bold px-10 py-5 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-primary-500/30"
+      >
+        Quiero mi Chatbot por $49
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
