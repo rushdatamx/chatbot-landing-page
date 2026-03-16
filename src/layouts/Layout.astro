@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { Analytics } from '@vercel/analytics/astro';
 
 interface Props {
   title: string;
@@ -82,6 +81,6 @@ const fullTitle = `${title} | ${config.siteName}`;
   </head>
   <body class="bg-white text-gray-900 antialiased">
     <slot />
-    <Analytics />
+    <script is:inline defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
