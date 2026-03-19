@@ -48,6 +48,7 @@ const features = [
           href={checkoutUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onclick={`trackInitiateCheckout(); setTimeout(function(){window.open('${checkoutUrl}','_blank')}, 300); return false;`}
           class="block w-full bg-primary-500 hover:bg-primary-600 text-white font-bold py-5 px-8 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-center"
         >
           Quiero mi Chatbot por $49

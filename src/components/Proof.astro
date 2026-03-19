@@ -113,6 +113,7 @@ const checkoutUrl = "https://pay.hotmart.com/R104883023O?bid=1773453606789";
             href={checkoutUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onclick={`trackInitiateCheckout(); setTimeout(function(){window.open('${checkoutUrl}','_blank')}, 300); return false;`}
             class="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white font-bold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
           >
             Quiero replicarlo

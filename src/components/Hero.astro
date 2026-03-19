@@ -48,6 +48,7 @@ const checkoutUrl = "https://pay.hotmart.com/R104883023O?bid=1773453606789";
             href={checkoutUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onclick={`trackInitiateCheckout(); setTimeout(function(){window.open('${checkoutUrl}','_blank')}, 300); return false;`}
             class="group inline-flex items-center justify-center gap-3 bg-primary-500 hover:bg-primary-600 text-white font-bold px-8 py-5 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-primary-500/40"
           >
             Quiero mi Chatbot
