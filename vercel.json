@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.chatbot.rushdata.com.mx"
+        }
+      ],
+      "destination": "https://chatbot.rushdata.com.mx/:path*",
+      "permanent": true
+    }
+  ]
+}
